@@ -16,7 +16,7 @@ func TestGetAPIKey(t *testing.T) {
 	if err != nil {
 		t.Errorf("Couldn't get ApiKey: %v", err)
 	}
-	if apiKey == testKey {
+	if apiKey != testKey {
 		t.Errorf("ApiKey didn't match target:\n\twanted: %v\n\tgot:%v", testKey, apiKey)
 	}
 }
